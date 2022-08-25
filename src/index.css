@@ -5,9 +5,133 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #111;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+::selection{
+  background-color: #E50914;
+  color: #fafafa;
+}
+
+.fw-bold{
+  font-weight: bold;
+}
+
+.film-item{
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  position: relative !important;
+  transition: transform 500ms ease-in-out;
+}
+
+.film-item:hover{
+  transform: scale(125%);
+  transition: transform 500ms ease-in-out;
+  cursor:zoom-in;
+}
+
+.film-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:50px;
+  justify-content: center;
+  margin: 52px 0;
+}
+
+.film-ad{
+  position: absolute !important;
+  bottom:0; left:0; right: 0;
+  padding:24px 16px;
+  font-size: 24px;
+  color:#fafafa;
+  margin: 0;
+  word-wrap: break-word;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 7%,transparent 100%);
+}
+
+h2{
+  color:#fafafa;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.header-title{
+  color:#E50914;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Netflix Sans';
+}
+
+footer{
+  border-top:1px solid #f2f2f2;
+  padding: 12px 24px;
+  margin-top:32px;
+}
+
+.text-white{
+  color:#fafafa;
+}
+
+.footer-brand{
+  color:#fafafa;
+}
+
+.film-detail-container{
+  width: 40%;
+  height: 100vh;
+  margin: 0;
+  padding: 48px 16px;
+  background: linear-gradient(90deg, rgba(0,0,0) 15%,rgba(0, 0, 0, 0.801) 55%,rgba(0, 0, 0, 0.589) 80%,transparent 100%);
+}
+
+.film-banner *{
+  color:#f2f2f2;
+}
+
+.film-banner h5{
+  font-size: 20px;
+}
+
+.film-banner h4{
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(172, 171, 171);
+}
+
+.film-poster{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top:0;left:0;
+  z-index: -1;
+}
+
+.text-red{
+  color:#E50914;
+}
+
+.text-success{
+  color:rgb(11, 168, 6);
+}
+
+.page-buttons{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+
+.page-btn{
+  background-color: #E50914;
+  text-decoration: none;
+  color: #f2f2f2;
+  padding: 12px 24px;
 }
