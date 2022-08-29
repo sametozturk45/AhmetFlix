@@ -1,15 +1,20 @@
 import {useParams} from 'react-router-dom';
 import useFetch from '../Functions/useFetch';
+import { Link } from 'react-router-dom';
 
 const ItemDetails = () => {
     const {id} = useParams();
     const {data,error,loading} = useFetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=dbf1661ce16804e33b818af9c3e1a1bc&language=en-US");
+    const geriGit=()=>{
+        window.history.back();
+    }
     return ( 
         <div className='film-detail'>
             {loading && <h2>Veriler Yükleniyor...</h2>}
             {error && <h2>Verileri getirirken bir hata oluştu</h2>}
             {data && (
                     <div className='film-detail-container' key={data.id}>
+                      <button className='page-btn' onClick={geriGit}>GERİ DÖN</button>
                         <div className="film-banner">
                             <h2>{data.original_title}</h2>
                             <h5 color="#ddd">{data.release_date}</h5>
